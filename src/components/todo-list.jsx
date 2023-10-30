@@ -28,8 +28,10 @@ function TodoList (){
         <>
         <div>
             {todos.map((todo, index) => (
-            <div key={todo.id}>
-                <span onClick={()=> handleStatus(index)}>
+            <div key={todo.id} className="flex">
+                <input type="checkbox" onClick={() => handleStatus(index)}
+                className={todo.status ? "line-through" : ""}/>
+                <span className={todo.status ? "line-through" : ""}>
                     {todo.value}
                 </span>
                 <div>
