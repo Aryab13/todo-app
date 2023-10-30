@@ -19,8 +19,8 @@ function TodoList (){
       };
 
       const handleDelete = (todo) => {
-        let cloneTodos = [...todos];
-        cloneTodos.filter((item) => item.id != todos.id);
+        const updatedTodos = todos.filter((item) => item.id !== todo.id);
+        setTodos(updatedTodos);
 
       }
 
@@ -34,7 +34,7 @@ function TodoList (){
                 </span>
                 <div>
                     <button onClick={()=>handleEdit(todo)}>✏️</button>
-                    <button></button>
+                    <button onClick={()=>handleDelete(todo)}>🗑️</button>
                 </div>
             </div>
             ))}
