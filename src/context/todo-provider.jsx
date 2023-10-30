@@ -5,7 +5,7 @@ export const TodoContext = createContext();
 function TodoProvider({ children }) {
   const [todos, setTodos] = useState([
     { id: 1, value: "Buy Milk", status: false },
-    { id: 2, value: "Buy Egg", status: false },
+    { id: 2, value: "Buy Egg", status: true },
     { id: 3, value: "Buy T-Shirt", status: false },
   ]);
   const [todoInput, setTodoInput] = useState("");
