@@ -28,15 +28,18 @@ function TodoList (){
         <>
         <div>
             {todos.map((todo, index) => (
-            <div key={todo.id} className="flex">
+            <div key={todo.id} className="flex justify-between w-80 outline outline-1 outline-slate-400 px-2 mb-5 py-2">
+                <div>
                 <input type="checkbox" onClick={() => handleStatus(index)}
-                className={todo.status ? "line-through" : ""}/>
-                <span className={todo.status ? "line-through" : ""}>
+                className={ `h-5 w-5 ${todo.status ? "line-through" : ""}  `}/>
+
+                <span className={ `ml-2 ${todo.status ? "line-through" : ""}  `}>
                     {todo.value}
                 </span>
+                </div>
                 <div>
-                    <button onClick={()=>handleEdit(todo)}>✏️</button>
-                    <button onClick={()=>handleDelete(todo)}>🗑️</button>
+                    <button onClick={()=>handleEdit(todo)} className={todo.status ? "hidden" : ""}>✏️</button>
+                    <button onClick={()=>handleDelete(todo)} className={todo.status ? "hidden" : ""}>🗑️</button>
                 </div>
             </div>
             ))}

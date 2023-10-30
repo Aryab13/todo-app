@@ -43,11 +43,11 @@ function TodoInput() {
             value={todoInput}
             placeholder="What to do"
             onChange={(e) => setTodoInput(e.target.value)}
-            className="outline outline-1 rounded-md p-1 m-3 focus:outline-purple-500"
+            className="outline outline-1 rounded-md p-1 m-3 focus:outline-blue-400 w-[350px]"
             />
             <button onClick={handleClick}
-            className="bg-purple-500 p-1 px-2 rounded-md hover:bg-purple-600"
-            >{isEdit ? "Edit" : "Add"}</button>
+            className="bg-blue-400 p-1 px-2 rounded-md hover:bg-blue-500"
+            >{isEdit ? "📝" : "➕"}</button>
         </form>
       </>
     )
